@@ -5,9 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BookStore"
         mc:Ignorable="d"
-        Title="MainWindow" 
+        Title="BookStore" 
         Height="450" Width="800"
-        ResizeMode="NoResize">
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Icon="/Resources/Icon/iconApp.png">
     <Window.Resources>
         <Style TargetType="ScrollBar">
             <Style.Triggers>
@@ -16,40 +18,81 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
+        <Style TargetType="TextBlock" x:Key="TBStyle">
+            <Setter Property="FontSize" Value="17"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="Margin" Value="0 1.5"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
     </Window.Resources>
 
     <Grid>
         <ListView x:Name="LVProduct" 
                   d:ItemsSource="{d:SampleData ItemCount=2}"
                   BorderThickness="0"
-                  ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                  ScrollViewer.CanContentScroll="False">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Border BorderBrush="Black"
                             BorderThickness="0 1"
-                            Padding="10 14">
+                            Padding="10 14"
+                            Background="{Binding BGDiscount}">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="206"/>
-                                <ColumnDefinition Width="353"/>
-                                <ColumnDefinition Width="208"/>
+                                <ColumnDefinition Width="390"/>
+                                <ColumnDefinition Width="199"/>
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="100"/>
+                                <RowDefinition Height="150"/>
                             </Grid.RowDefinitions>
-
+                            
                             <Border BorderBrush="Black"
-                                    BorderThickness="1">
-                                <Image Source="{Binding MainImage}" Width="100" Height="100"/>
+                                    BorderThickness="1"
+                                    Padding="10">
+                                <Image Source="{Binding MainImage}"/>
                             </Border>
+                            
                             <Border BorderBrush="Black"
                                     BorderThickness="1"
                                     Grid.Column="1"
-                                    Margin="20,0,20,0">
+                                    Margin="20,0,20,0"
+                                    Padding="10">
+                                <StackPanel>
+                                    <TextBlock Text="{Binding Name}"
+                                               Style="{StaticResource TBStyle}"
+                                               FontWeight="Bold"/>
+                                    <TextBlock Text="{Binding Description}"
+                                               Style="{StaticResource TBStyle}"
+                                               TextTrimming="CharacterEllipsis"
+                                               MaxHeight="40"/>
+                                    <TextBlock Text="{Binding Manufacturer.Name, StringFormat='Производитель: {0}'}"
+                                               Style="{StaticResource TBStyle}"/>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Цена: "
+                                                   Style="{StaticResource TBStyle}"/>
+                                        <TextBlock Text="{Binding Price}"
+                                                   Style="{StaticResource TBStyle}"
+                                                   TextDecorations="{Binding TDPrice}"/>
+                                        <TextBlock Text="{Binding DiscountPrice}"
+                                                   Style="{StaticResource TBStyle}"
+                                                   Margin="5 0 0 0"
+                                                   Visibility="{Binding VDiscountPrice}"/>
+                                        <TextBlock Text="рублей."
+                                                   Style="{StaticResource TBStyle}"
+                                                   Margin="5 0 0 0"/>
+                                    </StackPanel>
+                                </StackPanel>
                             </Border>
+                            
                             <Border BorderBrush="Black"
                                     BorderThickness="1"
                                     Grid.Column="2" Margin="0,0,50,0">
+                                <TextBlock Text="{Binding StrDiscount}"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           FontSize="20"/>
                             </Border>
                         </Grid>
                     </Border>

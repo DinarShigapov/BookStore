@@ -150,16 +150,17 @@
       <DependentUpon>ProductListDB.edmx</DependentUpon>
       <LastGenOutput>ProductListDB.cs</LastGenOutput>
     </Content>
-    <Resource Include="Resources\F837T5.jpg" />
-    <Resource Include="Resources\G836T6.jpg" />
-    <Resource Include="Resources\G932T5.jpg" />
-    <Resource Include="Resources\H628R4.jpg" />
-    <Resource Include="Resources\H902T6.jpg" />
-    <Resource Include="Resources\H938T5.jpg" />
-    <Resource Include="Resources\picture.png" />
-    <Resource Include="Resources\T593T5.jpg" />
-    <Resource Include="Resources\T826R4.jpg" />
-    <Resource Include="Resources\А112Т4.jpg" />
+    <Resource Include="Resources\Icon\iconApp.png" />
+    <Resource Include="Resources\DefaultImages\picture.png" />
+    <Resource Include="Resources\Material\F837T5.jpg" />
+    <Resource Include="Resources\Material\G836T6.jpg" />
+    <Resource Include="Resources\Material\G932T5.jpg" />
+    <Resource Include="Resources\Material\H628R4.jpg" />
+    <Resource Include="Resources\Material\H902T6.jpg" />
+    <Resource Include="Resources\Material\H938T5.jpg" />
+    <Resource Include="Resources\Material\T593T5.jpg" />
+    <Resource Include="Resources\Material\T826R4.jpg" />
+    <Resource Include="Resources\Material\А112Т4.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
