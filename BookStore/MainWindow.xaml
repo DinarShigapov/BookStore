@@ -23,11 +23,14 @@
             <Setter Property="TextWrapping" Value="Wrap"/>
             <Setter Property="Margin" Value="0 1.5"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontFamily" Value="Hinting"></Setter>
+            <Setter Property="FontWeight" Value="SemiBold"/>
         </Style>
+        
     </Window.Resources>
 
     <Grid>
-        <ListView x:Name="LVProduct" 
+        <ListView x:Name="LVProduct"
                   d:ItemsSource="{d:SampleData ItemCount=2}"
                   BorderThickness="0"
                   ScrollViewer.HorizontalScrollBarVisibility="Disabled"
@@ -49,8 +52,8 @@
                             </Grid.RowDefinitions>
                             
                             <Border BorderBrush="Black"
-                                    BorderThickness="1"
-                                    Padding="10">
+                                    BorderThickness="2"
+                                    Padding="6">
                                 <Image Source="{Binding MainImage}"/>
                             </Border>
                             
@@ -87,12 +90,15 @@
                             </Border>
                             
                             <Border BorderBrush="Black"
-                                    BorderThickness="1"
-                                    Grid.Column="2" Margin="0,0,50,0">
+                                    BorderThickness="2"
+                                    Grid.Column="2" Margin="0,0,50,0"
+                                    Height="130"
+                                    Width="130">
                                 <TextBlock Text="{Binding StrDiscount}"
                                            HorizontalAlignment="Center"
                                            VerticalAlignment="Center"
-                                           FontSize="20"/>
+                                           FontSize="20"
+                                           Style="{StaticResource TBStyle}"/>
                             </Border>
                         </Grid>
                     </Border>

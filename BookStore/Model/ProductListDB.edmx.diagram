@@ -4,14 +4,14 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="77d697621f8441bc848d0e1b75f3e878" Name="Diagram1">
-        <EntityTypeShape EntityType="ProductListModel.Category" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProductListModel.Manufacturer" Width="1.5" PointX="0.75" PointY="6.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProductListModel.Product" Width="1.5" PointX="3" PointY="2.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProductListModel.Provider" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <AssociationConnector Association="ProductListModel.FK_Product_Category" ManuallyRouted="false" />
-        <AssociationConnector Association="ProductListModel.FK_Product_Manufacturer" ManuallyRouted="false" />
-        <AssociationConnector Association="ProductListModel.FK_Product_Provider" ManuallyRouted="false" />
+      <Diagram DiagramId="4e456b4c78a9413eb44772bed3167edf" Name="Diagram1">
+        <EntityTypeShape EntityType="ProductListDBModel.Category" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProductListDBModel.Manufacturer" Width="1.5" PointX="0.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProductListDBModel.Product" Width="1.5" PointX="3" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProductListDBModel.Provider" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="ProductListDBModel.FK_Product_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="ProductListDBModel.FK_Product_Manufacturer" ManuallyRouted="false" />
+        <AssociationConnector Association="ProductListDBModel.FK_Product_Provider" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

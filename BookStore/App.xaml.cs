@@ -14,7 +14,7 @@ namespace BookStore
     /// </summary>
     public partial class App : Application
     {
-        public static ProductListEntities DB = new ProductListEntities();     
+        public static ProductListDBEntities DB = new ProductListDBEntities();     
     }
 }    
      

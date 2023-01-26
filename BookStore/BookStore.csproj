@@ -140,16 +140,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Model\ProductListDB.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ProductListDB.Context.cs</LastGenOutput>
-      <DependentUpon>ProductListDB.edmx</DependentUpon>
-    </Content>
-    <Content Include="Model\ProductListDB.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ProductListDB.edmx</DependentUpon>
-      <LastGenOutput>ProductListDB.cs</LastGenOutput>
-    </Content>
     <Resource Include="Resources\Icon\iconApp.png" />
     <Resource Include="Resources\DefaultImages\picture.png" />
     <Resource Include="Resources\Material\F837T5.jpg" />
@@ -165,6 +155,17 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Model\ProductListDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ProductListDB.edmx</DependentUpon>
+      <LastGenOutput>ProductListDB.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\ProductListDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ProductListDB.edmx</DependentUpon>
+      <LastGenOutput>ProductListDB.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
